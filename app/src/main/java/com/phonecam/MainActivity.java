@@ -2,6 +2,7 @@ package com.phonecam;
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -14,7 +15,9 @@ import android.text.format.Formatter;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int PERM_REQUEST = 100;
 
     private TextView tvUrl, tvStatus, tvViewers, tvFps, tvQualityVal, tvResVal;
-    private Button btnToggle, btnSwitchCam;
+    private Button btnToggle, btnSwitchCam, btnHide;
     private SeekBar seekQuality;
     private Button btnResLow, btnResMid, btnResHigh;
 
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         tvResVal     = findViewById(R.id.tvResVal);
         btnToggle    = findViewById(R.id.btnToggle);
         btnSwitchCam = findViewById(R.id.btnSwitchCam);
+        btnHide      = findViewById(R.id.btnHide);
         seekQuality  = findViewById(R.id.seekQuality);
         btnResLow    = findViewById(R.id.btnResLow);
         btnResMid    = findViewById(R.id.btnResMid);
@@ -95,14 +99,72 @@ public class MainActivity extends AppCompatActivity {
                 CameraStreamService.EXTRA_FACING, currentFacing);
         });
 
+        // Hide icon button
+        btnHide.setOnClickListener(v -> showHideDialog());
+
         btnToggle.setOnClickListener(v -> {
             if (isRunning) stopSvc();
             else if (hasCameraPermission()) startSvc();
             else requestPermission();
         });
 
+        // Show whether icon is currently hidden
+        updateHideButton();
         updateUi(false, 0, 0);
     }
+
+    // ── Hide / Show icon ──────────────────────────────────────────────────────
+
+    private void showHideDialog() {
+        boolean hidden = isIconHidden();
+        if (hidden) {
+            // Already hidden — show how to get back
+            new AlertDialog.Builder(this)
+                .setTitle("Иконка скрыта")
+                .setMessage("Чтобы снова открыть приложение после скрытия:\n\n" +
+                    "• ADB: adb shell am start -n com.phonecam/.MainActivity\n\n" +
+                    "• Или набери в браузере телефона: phonecam://open\n\nПоказать иконку снова?")
+                .setPositiveButton("Показать иконку", (d, w) -> setIconVisible(true))
+                .setNegativeButton("Отмена", null)
+                .show();
+        } else {
+            new AlertDialog.Builder(this)
+                .setTitle("Скрыть иконку?")
+                .setMessage("Иконка исчезнет из лаунчера. Приложение продолжит работать.\n\n" +
+                    "Чтобы снова открыть:\n" +
+                    "ADB: adb shell am start -n com.phonecam/.MainActivity")
+                .setPositiveButton("Скрыть", (d, w) -> {
+                    setIconVisible(false);
+                    Toast.makeText(this, "Иконка скрыта. Приложение работает в фоне.", Toast.LENGTH_LONG).show();
+                })
+                .setNegativeButton("Отмена", null)
+                .show();
+        }
+    }
+
+    private void setIconVisible(boolean visible) {
+        ComponentName alias = new ComponentName(this, "com.phonecam.MainActivityLauncher");
+        int state = visible
+            ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+            : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+        getPackageManager().setComponentEnabledSetting(alias, state, PackageManager.DONT_KILL_APP);
+        updateHideButton();
+    }
+
+    private boolean isIconHidden() {
+        ComponentName alias = new ComponentName(this, "com.phonecam.MainActivityLauncher");
+        int state = getPackageManager().getComponentEnabledSetting(alias);
+        return state == PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+    }
+
+    private void updateHideButton() {
+        if (btnHide == null) return;
+        boolean hidden = isIconHidden();
+        btnHide.setText(hidden ? "ПОКАЗАТЬ ИКОНКУ" : "СКРЫТЬ ИКОНКУ");
+        btnHide.setTextColor(getResources().getColor(hidden ? R.color.accent : R.color.muted));
+    }
+
+    // ── Resolution ────────────────────────────────────────────────────────────
 
     private void setResolution(int idx) {
         currentRes = idx;
@@ -137,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         registerReceiver(statusReceiver, new IntentFilter(CameraStreamService.BROADCAST_STATUS));
+        updateHideButton();
     }
 
     @Override

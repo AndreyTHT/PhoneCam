@@ -1,0 +1,245 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:2:1-36:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\a377ea6370342db61e8e12cb62644509\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ce2ad3af4cf17368a74e21f17f868bd1\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\19347d1503ecf3dde132fffda18f3292\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ea28827ab5bb326f1ae004e48900fa97\transformed\jetified-activity-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\5cd81ef1a83d79167f259dcbb14b5ca2\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\3e4b4c85981101d6f5d72c5a7ccaea06\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\fded920770d8df690f122930e64f85e1\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\04c1340d12c4d30ce22244d937c0885e\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\64f3a6c27f0577365d585eed220823ab\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\16954e54b5d95efcff4b8de5d18efda3\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\467448dc80cb4952befcc931b88c5e8b\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\42c47bc731c63704a808b8524cdd9e6e\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ea4faaa278048c4c615a58e6054484a4\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\111783c350c64b083cda8fde3d4ff97e\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\c3e6045cf4c301a12fd1481f534b05ab\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ae10a9e08f33a787bd7746441b3a93d2\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\f91eb65b1a4d39c53739e1ce6272718d\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\db402a0573d99fc3acd284b91952841f\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\df151171cd8f3fe17b36428852c2f69c\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\10c77bdad7afb211f7d9a6dbf613cddf\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\09eb3ba746710221681cd53da5830183\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\513e539cc389ac7f9cd597fa8f1aa92d\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\fdb6ef7cd93f8c97c6d323f2eecac48f\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\15e8ea78d6bf23911af6237a0dc507c3\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\cc177b39e9c3ffabb6c537649ce3ba94\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+	package
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:3:5-27
+		INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:5:22-62
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:8:22-73
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:9:5-77
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:9:22-74
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:10:5-68
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:10:22-65
+uses-feature#android.hardware.camera2
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:12:5-86
+	android:required
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:12:59-83
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:12:19-58
+application
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:14:5-35:19
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:14:5-35:19
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:14:5-35:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\db402a0573d99fc3acd284b91952841f\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\db402a0573d99fc3acd284b91952841f\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\10c77bdad7afb211f7d9a6dbf613cddf\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\10c77bdad7afb211f7d9a6dbf613cddf\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:17:9-41
+	android:testOnly
+		INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+	android:icon
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:16:9-43
+	android:allowBackup
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:15:9-36
+	android:theme
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:18:9-40
+activity#com.phonecam.MainActivity
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:20:9-28:20
+	android:screenOrientation
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:23:13-49
+	android:exported
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:22:13-36
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:24:13-27:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:26:27-74
+service#com.phonecam.CameraStreamService
+ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:30:9-33:54
+	android:exported
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:32:13-37
+	android:foregroundServiceType
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:33:13-51
+	android:name
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:31:13-48
+profileable
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml reason: profileable injection requested
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+	android:enabled
+		INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+	android:shell
+		INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+uses-sdk
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\a377ea6370342db61e8e12cb62644509\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\a377ea6370342db61e8e12cb62644509\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ce2ad3af4cf17368a74e21f17f868bd1\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ce2ad3af4cf17368a74e21f17f868bd1\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\19347d1503ecf3dde132fffda18f3292\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\19347d1503ecf3dde132fffda18f3292\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ea28827ab5bb326f1ae004e48900fa97\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ea28827ab5bb326f1ae004e48900fa97\transformed\jetified-activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\5cd81ef1a83d79167f259dcbb14b5ca2\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\5cd81ef1a83d79167f259dcbb14b5ca2\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\3e4b4c85981101d6f5d72c5a7ccaea06\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\3e4b4c85981101d6f5d72c5a7ccaea06\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\fded920770d8df690f122930e64f85e1\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\fded920770d8df690f122930e64f85e1\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\04c1340d12c4d30ce22244d937c0885e\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\04c1340d12c4d30ce22244d937c0885e\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\64f3a6c27f0577365d585eed220823ab\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\64f3a6c27f0577365d585eed220823ab\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\16954e54b5d95efcff4b8de5d18efda3\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\16954e54b5d95efcff4b8de5d18efda3\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\467448dc80cb4952befcc931b88c5e8b\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\467448dc80cb4952befcc931b88c5e8b\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\42c47bc731c63704a808b8524cdd9e6e\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\42c47bc731c63704a808b8524cdd9e6e\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ea4faaa278048c4c615a58e6054484a4\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ea4faaa278048c4c615a58e6054484a4\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\111783c350c64b083cda8fde3d4ff97e\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\111783c350c64b083cda8fde3d4ff97e\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\c3e6045cf4c301a12fd1481f534b05ab\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\c3e6045cf4c301a12fd1481f534b05ab\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ae10a9e08f33a787bd7746441b3a93d2\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\ae10a9e08f33a787bd7746441b3a93d2\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\f91eb65b1a4d39c53739e1ce6272718d\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\f91eb65b1a4d39c53739e1ce6272718d\transformed\jetified-savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\db402a0573d99fc3acd284b91952841f\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\db402a0573d99fc3acd284b91952841f\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\df151171cd8f3fe17b36428852c2f69c\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\df151171cd8f3fe17b36428852c2f69c\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\10c77bdad7afb211f7d9a6dbf613cddf\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\10c77bdad7afb211f7d9a6dbf613cddf\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\09eb3ba746710221681cd53da5830183\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\09eb3ba746710221681cd53da5830183\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\513e539cc389ac7f9cd597fa8f1aa92d\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\513e539cc389ac7f9cd597fa8f1aa92d\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\fdb6ef7cd93f8c97c6d323f2eecac48f\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\fdb6ef7cd93f8c97c6d323f2eecac48f\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\15e8ea78d6bf23911af6237a0dc507c3\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\15e8ea78d6bf23911af6237a0dc507c3\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\cc177b39e9c3ffabb6c537649ce3ba94\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\cc177b39e9c3ffabb6c537649ce3ba94\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\db402a0573d99fc3acd284b91952841f\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\db402a0573d99fc3acd284b91952841f\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+permission#com.phonecam.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+uses-permission#com.phonecam.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78

@@ -1,0 +1,26 @@
+R_DEF: Internal format may change without notice
+local
+color accent
+color accent2
+color bg
+color btn_start
+color btn_stop
+color muted
+color surface
+color text
+id btnResHigh
+id btnResLow
+id btnResMid
+id btnSwitchCam
+id btnToggle
+id seekQuality
+id tvFps
+id tvQualityVal
+id tvResVal
+id tvStatus
+id tvUrl
+id tvViewers
+layout activity_main
+mipmap ic_launcher
+string app_name
+style AppTheme
