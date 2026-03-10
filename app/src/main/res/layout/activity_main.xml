@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PHONECAM"
+        android:textColor="@color/accent"
+        android:textSize="13sp"
+        android:letterSpacing="0.3"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Status + Viewers + FPS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/surface"
+            android:padding="14dp"
+            android:layout_marginEnd="6dp">
+            <TextView android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OFFLINE"
+                android:textColor="@color/muted"
+                android:textSize="22sp"
+                android:fontFamily="monospace"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STATUS"
+                android:textColor="@color/muted"
+                android:textSize="8sp"
+                android:letterSpacing="0.3"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/surface"
+            android:padding="14dp"
+            android:layout_marginEnd="6dp">
+            <TextView android:id="@+id/tvViewers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/accent2"
+                android:textSize="22sp"
+                android:fontFamily="monospace"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIEWERS"
+                android:textColor="@color/muted"
+                android:textSize="8sp"
+                android:letterSpacing="0.3"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/surface"
+            android:padding="14dp">
+            <TextView android:id="@+id/tvFps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/accent2"
+                android:textSize="22sp"
+                android:fontFamily="monospace"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FPS"
+                android:textColor="@color/muted"
+                android:textSize="8sp"
+                android:letterSpacing="0.3"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- URL -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/surface"
+        android:padding="14dp"
+        android:layout_marginBottom="12dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIEWER URL"
+            android:textColor="@color/muted"
+            android:textSize="8sp"
+            android:letterSpacing="0.3"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="4dp"/>
+        <TextView android:id="@+id/tvUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="http://..."
+            android:textColor="@color/accent2"
+            android:textSize="14sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
+    <!-- Quality -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/surface"
+        android:padding="14dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QUALITY"
+                android:textColor="@color/muted"
+                android:textSize="8sp"
+                android:letterSpacing="0.3"
+                android:fontFamily="monospace"
+                android:layout_weight="1"/>
+            <TextView android:id="@+id/tvQualityVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50%"
+                android:textColor="@color/accent"
+                android:textSize="12sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <SeekBar android:id="@+id/seekQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="85"
+            android:progress="40"
+            android:progressTint="@color/accent"
+            android:thumbTint="@color/accent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="FAST" android:textColor="@color/muted" android:textSize="8sp"
+                android:fontFamily="monospace" android:layout_weight="1"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="HQ" android:textColor="@color/muted" android:textSize="8sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Resolution -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/surface"
+        android:padding="14dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RESOLUTION"
+                android:textColor="@color/muted"
+                android:textSize="8sp"
+                android:letterSpacing="0.3"
+                android:fontFamily="monospace"
+                android:layout_weight="1"/>
+            <TextView android:id="@+id/tvResVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="854×480"
+                android:textColor="@color/accent"
+                android:textSize="12sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnResLow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="480p"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:stateListAnimator="@null"
+                android:layout_marginEnd="4dp"
+                android:background="@color/surface"
+                android:textColor="@color/text"/>
+
+            <Button android:id="@+id/btnResMid"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="854p"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:stateListAnimator="@null"
+                android:layout_marginEnd="4dp"
+                android:background="@color/accent"
+                android:textColor="@color/bg"/>
+
+            <Button android:id="@+id/btnResHigh"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="720p"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:stateListAnimator="@null"
+                android:background="@color/surface"
+                android:textColor="@color/text"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Camera switch + Start/Stop -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button android:id="@+id/btnSwitchCam"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="BACK CAM"
+            android:textColor="@color/accent2"
+            android:textSize="10sp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:stateListAnimator="@null"
+            android:background="@color/surface"
+            android:layout_marginEnd="8dp"/>
+
+        <Button android:id="@+id/btnToggle"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="2"
+            android:text="START"
+            android:textColor="@color/bg"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:stateListAnimator="@null"
+            android:background="@color/btn_start"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open the Viewer URL on any device in your WiFi to watch the stream."
+        android:textColor="@color/muted"
+        android:textSize="10sp"
+        android:fontFamily="monospace"
+        android:lineSpacingMultiplier="1.5"/>
+
+</LinearLayout>
+</ScrollView>

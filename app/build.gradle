@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.application'
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+android {
+    compileSdk 33
+
+    namespace "com.phonecam"
+
+    defaultConfig {
+        applicationId "com.phonecam"
+        minSdk 22
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    // NanoHTTPD with WebSocket support — tiny, works on API 22
+    implementation 'org.nanohttpd:nanohttpd-websocket:2.3.1'
+}
