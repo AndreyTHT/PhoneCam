@@ -46,73 +46,87 @@
 26-->[androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 27
 28    <application
-28-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:14:5-35:19
+28-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:14:5-47:19
 29        android:allowBackup="false"
 29-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:15:9-36
 30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 30-->[androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-31        android:extractNativeLibs="true"
-32        android:icon="@mipmap/ic_launcher"
-32-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:16:9-43
-33        android:label="@string/app_name"
-33-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:17:9-41
-34        android:testOnly="true"
-35        android:theme="@style/AppTheme" >
-35-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:18:9-40
-36        <activity
-36-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:20:9-28:20
-37            android:name="com.phonecam.MainActivity"
-37-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:21:13-41
-38            android:exported="true"
-38-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:22:13-36
-39            android:screenOrientation="portrait" >
-39-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:23:13-49
-40            <intent-filter>
-40-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:24:13-27:29
-41                <action android:name="android.intent.action.MAIN" />
-41-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:25:17-69
-41-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:25:25-66
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:26:17-77
-43-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:26:27-74
-44            </intent-filter>
-45        </activity>
-46
-47        <service
-47-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:30:9-33:54
-48            android:name="com.phonecam.CameraStreamService"
-48-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:31:13-48
-49            android:exported="false"
-49-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:32:13-37
-50            android:foregroundServiceType="camera" />
-50-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:33:13-51
-51
-52        <profileable
-53            android:enabled="true"
-54            android:shell="true" />
+31        android:debuggable="true"
+32        android:extractNativeLibs="true"
+33        android:icon="@mipmap/ic_launcher"
+33-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:16:9-43
+34        android:label="@string/app_name"
+34-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:17:9-41
+35        android:testOnly="true"
+36        android:theme="@style/AppTheme" >
+36-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:18:9-40
+37
+38        <!-- MainActivity без LAUNCHER — иконки нет по умолчанию -->
+39        <activity
+39-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:21:9-24:52
+40            android:name="com.phonecam.MainActivity"
+40-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:22:13-41
+41            android:exported="true"
+41-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:23:13-36
+42            android:screenOrientation="portrait" />
+42-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:24:13-49
+43        <!--
+44            Alias — именно он создаёт иконку в лаунчере.
+45            Отключается программно → иконка исчезает.
+46            При следующей установке снова появится (enabled=true).
+47        -->
+48        <activity-alias
+48-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:31:9-40:26
+49            android:name="com.phonecam.MainActivityLauncher"
+49-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:32:13-49
+50            android:enabled="true"
+50-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:35:13-35
+51            android:exported="true"
+51-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:34:13-36
+52            android:targetActivity="com.phonecam.MainActivity" >
+52-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:33:13-51
+53            <intent-filter>
+53-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:36:13-39:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:37:17-69
+54-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:37:25-66
 55
-56        <provider
-56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-57            android:name="androidx.startup.InitializationProvider"
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-58            android:authorities="com.phonecam.androidx-startup"
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-59            android:exported="false" >
-59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-60            <meta-data
-60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-61                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-62                android:value="androidx.startup" />
-62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-63            <meta-data
-63-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-64                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-64-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-65                android:value="androidx.startup" />
-65-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-66        </provider>
-67    </application>
-68
-69</manifest>
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:38:17-77
+56-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:38:27-74
+57            </intent-filter>
+58        </activity-alias>
+59
+60        <service
+60-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:42:9-45:54
+61            android:name="com.phonecam.CameraStreamService"
+61-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:43:13-48
+62            android:exported="false"
+62-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:44:13-37
+63            android:foregroundServiceType="camera" />
+63-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:45:13-51
+64
+65        <provider
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+66            android:name="androidx.startup.InitializationProvider"
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+67            android:authorities="com.phonecam.androidx-startup"
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+68            android:exported="false" >
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+69            <meta-data
+69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+70                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+71                android:value="androidx.startup" />
+71-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+72            <meta-data
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+73                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+73-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+74                android:value="androidx.startup" />
+74-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\57237e0559f4a91a1ca96f2ced80527b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+75        </provider>
+76    </application>
+77
+78</manifest>

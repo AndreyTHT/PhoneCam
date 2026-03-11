@@ -8,6 +8,7 @@ color btn_stop
 color muted
 color surface
 color text
+id btnHide
 id btnResHigh
 id btnResLow
 id btnResMid

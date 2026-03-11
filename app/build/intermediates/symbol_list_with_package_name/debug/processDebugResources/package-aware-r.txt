@@ -703,6 +703,7 @@ id async
 id beginning
 id blocking
 id bottom
+id btnHide
 id btnResHigh
 id btnResLow
 id btnResMid

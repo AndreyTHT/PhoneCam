@@ -28,30 +28,39 @@
     <application
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
         android:extractNativeLibs="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+
+        <!-- MainActivity без LAUNCHER — иконки нет по умолчанию -->
         <activity
             android:name="com.phonecam.MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait" />
+        <!--
+            Alias — именно он создаёт иконку в лаунчере.
+            Отключается программно → иконка исчезает.
+            При следующей установке снова появится (enabled=true).
+        -->
+        <activity-alias
+            android:name="com.phonecam.MainActivityLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:targetActivity="com.phonecam.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity-alias>
 
         <service
             android:name="com.phonecam.CameraStreamService"
             android:exported="false"
             android:foregroundServiceType="camera" />
-
-        <profileable
-            android:enabled="true"
-            android:shell="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
