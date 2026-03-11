@@ -10,10 +10,10 @@ repositories {
 android {
     compileSdk 33
 
-    namespace "com.phonecam"
+    namespace "com.Bluetooth"
 
     defaultConfig {
-        applicationId "com.phonecam"
+        applicationId "com.Bluetooth"
         minSdk 22
         targetSdk 33
         versionCode 1

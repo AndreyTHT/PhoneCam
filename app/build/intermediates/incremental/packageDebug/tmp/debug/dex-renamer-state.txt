@@ -1,7 +1,7 @@
 #Thu Mar 12 00:55:19 SAMT 2026
-base.0=C\:\\Users\\AndreyTHT\\Downloads\\PhoneCam_Android\\PhoneCamApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\AndreyTHT\\Downloads\\PhoneCam_Android\\PhoneCamApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\AndreyTHT\\Downloads\\PhoneCam_Android\\PhoneCamApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.0=C\:\\Users\\AndreyTHT\\Downloads\\Bluetooth_Android\\BluetoothApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\AndreyTHT\\Downloads\\Bluetooth_Android\\BluetoothApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\AndreyTHT\\Downloads\\Bluetooth_Android\\BluetoothApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=9/classes.dex

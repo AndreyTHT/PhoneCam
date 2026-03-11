@@ -1,4 +1,4 @@
-package com.phonecam;
+package com.Bluetooth;
 
 import android.util.Log;
 
@@ -327,7 +327,7 @@ public class StreamServer {
         return "<!DOCTYPE html><html><head>" +
         "<meta charset='UTF-8'>" +
         "<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no'>" +
-        "<title>PhoneCam</title>" +
+        "<title>Bluetooth</title>" +
         "<style>" +
         "*{margin:0;padding:0;box-sizing:border-box}" +
         "body{background:#0a0a0f;color:#e0e0f0;font-family:'Courier New',monospace;display:flex;flex-direction:column;height:100dvh;overflow:hidden}" +
@@ -358,7 +358,7 @@ public class StreamServer {
         ".sl{font-size:8px;color:#44445a;letter-spacing:2px}" +
         "</style></head><body>" +
         "<header>" +
-        "<span class='logo'>PHONECAM</span><span class='sep'></span>" +
+        "<span class='logo'>Bluetooth</span><span class='sep'></span>" +
         "<span id='st'>LIVE</span><span class='dot'></span>" +
         "</header>" +
         "<div id='wrap' onclick='toggleCtrl()'>" +

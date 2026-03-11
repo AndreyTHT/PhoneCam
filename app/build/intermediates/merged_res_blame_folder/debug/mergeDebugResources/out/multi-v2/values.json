@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.phonecam.app-mergeDebugResources-18:/values/values.xml",
+            "outputFile": "com.Bluetooth.app-mergeDebugResources-18:/values/values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\AndreyTHT\\.gradle\\caches\\8.9\\transforms\\f91eb65b1a4d39c53739e1ce6272718d\\transformed\\jetified-savedstate-1.2.0\\res\\values\\values.xml",
@@ -93,7 +93,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\AndreyTHT\\Downloads\\PhoneCam_Android\\PhoneCamApp\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\AndreyTHT\\Downloads\\Bluetooth_Android\\BluetoothApp\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -146,7 +146,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\AndreyTHT\\Downloads\\PhoneCam_Android\\PhoneCamApp\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\AndreyTHT\\Downloads\\Bluetooth_Android\\BluetoothApp\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "4,5,2,8,9,7,3,6",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -163,7 +163,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\AndreyTHT\\Downloads\\PhoneCam_Android\\PhoneCamApp\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\AndreyTHT\\Downloads\\Bluetooth_Android\\BluetoothApp\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

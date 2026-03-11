@@ -1,4 +1,4 @@
-# PhoneCam — Android App
+# Bluetooth — Android App
 
 Нативное Android приложение. Телефон-камера становится сервером — второй телефон
 открывает браузер и смотрит стрим.
@@ -12,7 +12,7 @@
 ## Сборка
 
 1. Открой Android Studio
-2. File → Open → выбери папку `PhoneCamApp`
+2. File → Open → выбери папку `BluetoothApp`
 3. Дождись синхронизации Gradle
 4. Build → Build Bundle(s)/APK(s) → Build APK(s)
 5. APK будет в `app/build/outputs/apk/debug/`

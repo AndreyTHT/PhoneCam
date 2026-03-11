@@ -1,4 +1,4 @@
-package com.phonecam;
+package com.Bluetooth;
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 "Иконка исчезнет из лаунчера сразу.\n" +
                 "В списке приложений (Настройки) она останется — это нормально.\n\n" +
                 "Чтобы снова открыть:\n" +
-                "adb shell am start -n com.phonecam/.MainActivity\n\n" +
+                "adb shell am start -n com.Bluetooth/.MainActivity\n\n" +
                 "Или переустанови APK — иконка вернётся.")
             .setPositiveButton("Скрыть", (d, w) -> hideIcon())
             .setNegativeButton("Отмена", null)
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             PackageManager.DONT_KILL_APP
         );
         Toast.makeText(this,
-            "Иконка скрыта. Для возврата: adb shell am start -n com.phonecam/.MainActivity",
+            "Иконка скрыта. Для возврата: adb shell am start -n com.Bluetooth/.MainActivity",
             Toast.LENGTH_LONG).show();
     }
 

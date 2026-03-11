@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.phonecam.app-mergeDebugResources-18:/values-my/values-my.xml",
+            "outputFile": "com.Bluetooth.app-mergeDebugResources-18:/values-my/values-my.xml",
             "map": [
                 {
                     "source": "C:\\Users\\AndreyTHT\\.gradle\\caches\\8.9\\transforms\\d607fc3ffe6514c9d427152bfa4f6626\\transformed\\core-1.9.0\\res\\values-my\\values-my.xml",

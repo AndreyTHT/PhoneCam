@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.phonecam"
+    package="com.Bluetooth"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -20,10 +20,10 @@
         android:required="false" />
 
     <permission
-        android:name="com.phonecam.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.Bluetooth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.phonecam.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.Bluetooth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="false"
@@ -37,7 +37,7 @@
 
         <!-- Сама активити БЕЗ LAUNCHER — иконки нет по умолчанию -->
         <activity
-            android:name="com.phonecam.MainActivity"
+            android:name="com.Bluetooth.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <!--
@@ -46,10 +46,10 @@
             Сама MainActivity при этом продолжает работать.
         -->
         <activity-alias
-            android:name="com.phonecam.Launcher"
+            android:name="com.Bluetooth.Launcher"
             android:enabled="true"
             android:exported="true"
-            android:targetActivity="com.phonecam.MainActivity" >
+            android:targetActivity="com.Bluetooth.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -58,13 +58,13 @@
         </activity-alias>
 
         <service
-            android:name="com.phonecam.CameraStreamService"
+            android:name="com.Bluetooth.CameraStreamService"
             android:exported="false"
             android:foregroundServiceType="camera" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.phonecam.androidx-startup"
+            android:authorities="com.Bluetooth.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

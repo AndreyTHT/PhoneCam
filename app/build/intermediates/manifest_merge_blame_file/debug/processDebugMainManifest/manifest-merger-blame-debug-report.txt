@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.phonecam"
+3    package="com.Bluetooth"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -9,108 +9,108 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.CAMERA" />
-11-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:5:5-65
-11-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:5:22-62
+11-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:5:5-65
+11-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:5:22-62
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:6:5-67
-12-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:6:22-64
+12-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:6:5-67
+12-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:6:22-64
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-13-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:7:5-79
-13-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:7:22-76
+13-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:7:22-76
 14    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-14-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:8:5-76
-14-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:8:22-73
+14-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:8:5-76
+14-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:8:22-73
 15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-15-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:9:5-77
-15-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:9:22-74
+15-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:9:5-77
+15-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:9:22-74
 16    <uses-permission android:name="android.permission.WAKE_LOCK" />
-16-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:10:5-68
-16-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:10:22-65
+16-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:10:5-68
+16-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:10:22-65
 17
 18    <uses-feature
-18-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:12:5-86
+18-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:12:5-86
 19        android:name="android.hardware.camera2"
-19-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:12:19-58
+19-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:12:19-58
 20        android:required="false" />
-20-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:12:59-83
+20-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:12:59-83
 21
 22    <permission
 22-->[androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-23        android:name="com.phonecam.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+23        android:name="com.Bluetooth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 23-->[androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 24        android:protectionLevel="signature" />
 24-->[androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 25
-26    <uses-permission android:name="com.phonecam.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+26    <uses-permission android:name="com.Bluetooth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 26-->[androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 26-->[androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 27
 28    <application
-28-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:14:5-47:19
+28-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:14:5-47:19
 29        android:allowBackup="false"
-29-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:15:9-36
+29-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:15:9-36
 30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 30-->[androidx.core:core:1.9.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\d607fc3ffe6514c9d427152bfa4f6626\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 31        android:debuggable="true"
 32        android:extractNativeLibs="true"
 33        android:icon="@mipmap/ic_launcher"
-33-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:16:9-43
+33-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:16:9-43
 34        android:label="@string/app_name"
-34-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:17:9-41
+34-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:17:9-41
 35        android:testOnly="true"
 36        android:theme="@style/AppTheme" >
-36-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:18:9-40
+36-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:18:9-40
 37
 38        <!-- Сама активити БЕЗ LAUNCHER — иконки нет по умолчанию -->
 39        <activity
-39-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:21:9-24:52
-40            android:name="com.phonecam.MainActivity"
-40-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:22:13-41
+39-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:21:9-24:52
+40            android:name="com.Bluetooth.MainActivity"
+40-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:22:13-41
 41            android:exported="true"
-41-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:23:13-36
+41-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:23:13-36
 42            android:screenOrientation="portrait" />
-42-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:24:13-49
+42-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:24:13-49
 43        <!--
 44            Alias создаёт иконку в лаунчере.
 45            Когда его отключить — иконка пропадает мгновенно.
 46            Сама MainActivity при этом продолжает работать.
 47        -->
 48        <activity-alias
-48-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:31:9-40:26
-49            android:name="com.phonecam.Launcher"
-49-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:32:13-37
+48-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:31:9-40:26
+49            android:name="com.Bluetooth.Launcher"
+49-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:32:13-37
 50            android:enabled="true"
-50-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:35:13-35
+50-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:35:13-35
 51            android:exported="true"
-51-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:34:13-36
-52            android:targetActivity="com.phonecam.MainActivity" >
-52-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:33:13-51
+51-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:34:13-36
+52            android:targetActivity="com.Bluetooth.MainActivity" >
+52-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:33:13-51
 53            <intent-filter>
-53-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:36:13-39:29
+53-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:36:13-39:29
 54                <action android:name="android.intent.action.MAIN" />
-54-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:37:17-69
-54-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:37:25-66
+54-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:37:17-69
+54-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:37:25-66
 55
 56                <category android:name="android.intent.category.LAUNCHER" />
-56-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:38:17-77
-56-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:38:27-74
+56-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:38:17-77
+56-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:38:27-74
 57            </intent-filter>
 58        </activity-alias>
 59
 60        <service
-60-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:42:9-45:54
-61            android:name="com.phonecam.CameraStreamService"
-61-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:43:13-48
+60-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:42:9-45:54
+61            android:name="com.Bluetooth.CameraStreamService"
+61-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:43:13-48
 62            android:exported="false"
-62-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:44:13-37
+62-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:44:13-37
 63            android:foregroundServiceType="camera" />
-63-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:45:13-51
+63-->C:\Users\AndreyTHT\Downloads\Bluetooth_Android\BluetoothApp\app\src\main\AndroidManifest.xml:45:13-51
 64
 65        <provider
 65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 66            android:name="androidx.startup.InitializationProvider"
 66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-67            android:authorities="com.phonecam.androidx-startup"
+67            android:authorities="com.Bluetooth.androidx-startup"
 67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 68            android:exported="false" >
 68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\AndreyTHT\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
