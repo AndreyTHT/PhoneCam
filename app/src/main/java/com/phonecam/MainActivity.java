@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
         tvUrl.setText("http://" + getLocalIp() + ":" + StreamServer.HTTP_PORT);
 
-        // Quality
         seekQuality.setMax(85);
         seekQuality.setProgress(currentQuality - 10);
         tvQualityVal.setText(currentQuality + "%");
@@ -82,13 +81,11 @@ public class MainActivity extends AppCompatActivity {
             @Override public void onStopTrackingTouch(SeekBar sb) {}
         });
 
-        // Resolution
         btnResLow.setOnClickListener(v  -> setResolution(0));
         btnResMid.setOnClickListener(v  -> setResolution(1));
         btnResHigh.setOnClickListener(v -> setResolution(2));
         highlightRes(currentRes);
 
-        // Camera switch
         btnSwitchCam.setOnClickListener(v -> {
             currentFacing = (currentFacing == CameraCharacteristics.LENS_FACING_BACK)
                 ? CameraCharacteristics.LENS_FACING_FRONT
@@ -99,69 +96,44 @@ public class MainActivity extends AppCompatActivity {
                 CameraStreamService.EXTRA_FACING, currentFacing);
         });
 
-        // Hide icon button
         btnHide.setOnClickListener(v -> showHideDialog());
-
         btnToggle.setOnClickListener(v -> {
             if (isRunning) stopSvc();
             else if (hasCameraPermission()) startSvc();
             else requestPermission();
         });
 
-        // Show whether icon is currently hidden
-        updateHideButton();
         updateUi(false, 0, 0);
     }
 
-    // ── Hide / Show icon ──────────────────────────────────────────────────────
+    // ── Скрыть иконку ────────────────────────────────────────────────────────
 
     private void showHideDialog() {
-        boolean hidden = isIconHidden();
-        if (hidden) {
-            // Already hidden — show how to get back
-            new AlertDialog.Builder(this)
-                .setTitle("Иконка скрыта")
-                .setMessage("Чтобы снова открыть приложение после скрытия:\n\n" +
-                    "• ADB: adb shell am start -n com.phonecam/.MainActivity\n\n" +
-                    "• Или набери в браузере телефона: phonecam://open\n\nПоказать иконку снова?")
-                .setPositiveButton("Показать иконку", (d, w) -> setIconVisible(true))
-                .setNegativeButton("Отмена", null)
-                .show();
-        } else {
-            new AlertDialog.Builder(this)
-                .setTitle("Скрыть иконку?")
-                .setMessage("Иконка исчезнет из лаунчера. Приложение продолжит работать.\n\n" +
-                    "Чтобы снова открыть:\n" +
-                    "ADB: adb shell am start -n com.phonecam/.MainActivity")
-                .setPositiveButton("Скрыть", (d, w) -> {
-                    setIconVisible(false);
-                    Toast.makeText(this, "Иконка скрыта. Приложение работает в фоне.", Toast.LENGTH_LONG).show();
-                })
-                .setNegativeButton("Отмена", null)
-                .show();
-        }
+        new AlertDialog.Builder(this)
+            .setTitle("Скрыть иконку?")
+            .setMessage(
+                "Иконка исчезнет из лаунчера сразу.\n" +
+                "В списке приложений (Настройки) она останется — это нормально.\n\n" +
+                "Чтобы снова открыть:\n" +
+                "adb shell am start -n com.phonecam/.MainActivity\n\n" +
+                "Или переустанови APK — иконка вернётся.")
+            .setPositiveButton("Скрыть", (d, w) -> hideIcon())
+            .setNegativeButton("Отмена", null)
+            .show();
     }
 
-    private void setIconVisible(boolean visible) {
-        ComponentName alias = new ComponentName(this, "com.phonecam.MainActivityLauncher");
-        int state = visible
-            ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-            : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
-        getPackageManager().setComponentEnabledSetting(alias, state, PackageManager.DONT_KILL_APP);
-        updateHideButton();
-    }
-
-    private boolean isIconHidden() {
-        ComponentName alias = new ComponentName(this, "com.phonecam.MainActivityLauncher");
-        int state = getPackageManager().getComponentEnabledSetting(alias);
-        return state == PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
-    }
-
-    private void updateHideButton() {
-        if (btnHide == null) return;
-        boolean hidden = isIconHidden();
-        btnHide.setText(hidden ? "ПОКАЗАТЬ ИКОНКУ" : "СКРЫТЬ ИКОНКУ");
-        btnHide.setTextColor(getResources().getColor(hidden ? R.color.accent : R.color.muted));
+    private void hideIcon() {
+        // Отключаем alias .Launcher — иконка исчезает из лаунчера немедленно.
+        // MainActivity и сервис продолжают работать.
+        ComponentName alias = new ComponentName(getPackageName(), getPackageName() + ".Launcher");
+        getPackageManager().setComponentEnabledSetting(
+            alias,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP
+        );
+        Toast.makeText(this,
+            "Иконка скрыта. Для возврата: adb shell am start -n com.phonecam/.MainActivity",
+            Toast.LENGTH_LONG).show();
     }
 
     // ── Resolution ────────────────────────────────────────────────────────────
@@ -176,10 +148,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void highlightRes(int idx) {
-        int on = getResources().getColor(R.color.accent);
-        int off = getResources().getColor(R.color.surface);
-        int bgOn = getResources().getColor(R.color.bg);
-        int textOff = getResources().getColor(R.color.text);
+        int on      = ContextCompat.getColor(this, R.color.accent);
+        int off     = ContextCompat.getColor(this, R.color.surface);
+        int bgOn    = ContextCompat.getColor(this, R.color.bg);
+        int textOff = ContextCompat.getColor(this, R.color.text);
         btnResLow.setBackgroundColor(idx == 0 ? on : off);
         btnResMid.setBackgroundColor(idx == 1 ? on : off);
         btnResHigh.setBackgroundColor(idx == 2 ? on : off);
@@ -199,7 +171,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         registerReceiver(statusReceiver, new IntentFilter(CameraStreamService.BROADCAST_STATUS));
-        updateHideButton();
     }
 
     @Override
@@ -234,15 +205,36 @@ public class MainActivity extends AppCompatActivity {
         tvStatus.setTextColor(getResources().getColor(running ? R.color.accent : R.color.muted));
         btnToggle.setText(running ? "STOP" : "START");
         btnToggle.setBackgroundColor(getResources().getColor(running ? R.color.btn_stop : R.color.btn_start));
-        btnToggle.setTextColor(getResources().getColor(R.color.bg));
+        btnToggle.setTextColor(ContextCompat.getColor(this, R.color.bg));
         tvViewers.setText(String.valueOf(viewers));
         tvFps.setText(String.valueOf(fps));
     }
 
     private String getLocalIp() {
         try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                // API 31+ — use ConnectivityManager / LinkProperties
+                android.net.ConnectivityManager cm =
+                    (android.net.ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                if (cm != null) {
+                    android.net.Network net = cm.getActiveNetwork();
+                    if (net != null) {
+                        android.net.LinkProperties lp = cm.getLinkProperties(net);
+                        if (lp != null) {
+                            for (android.net.LinkAddress la : lp.getLinkAddresses()) {
+                                java.net.InetAddress addr = la.getAddress();
+                                if (addr instanceof java.net.Inet4Address && !addr.isLoopbackAddress()) {
+                                    return addr.getHostAddress();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // API < 31 — WifiManager still fine
             WifiManager wm = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
             if (wm != null) {
+                @SuppressWarnings("deprecation")
                 int ip = wm.getConnectionInfo().getIpAddress();
                 if (ip != 0) return Formatter.formatIpAddress(ip);
             }

@@ -61,7 +61,7 @@
 36        android:theme="@style/AppTheme" >
 36-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:18:9-40
 37
-38        <!-- MainActivity без LAUNCHER — иконки нет по умолчанию -->
+38        <!-- Сама активити БЕЗ LAUNCHER — иконки нет по умолчанию -->
 39        <activity
 39-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:21:9-24:52
 40            android:name="com.phonecam.MainActivity"
@@ -71,14 +71,14 @@
 42            android:screenOrientation="portrait" />
 42-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:24:13-49
 43        <!--
-44            Alias — именно он создаёт иконку в лаунчере.
-45            Отключается программно → иконка исчезает.
-46            При следующей установке снова появится (enabled=true).
+44            Alias создаёт иконку в лаунчере.
+45            Когда его отключить — иконка пропадает мгновенно.
+46            Сама MainActivity при этом продолжает работать.
 47        -->
 48        <activity-alias
 48-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:31:9-40:26
-49            android:name="com.phonecam.MainActivityLauncher"
-49-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:32:13-49
+49            android:name="com.phonecam.Launcher"
+49-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:32:13-37
 50            android:enabled="true"
 50-->C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:35:13-35
 51            android:exported="true"

@@ -104,7 +104,7 @@ ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\mai
 		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:23:13-36
 	android:name
 		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:22:13-41
-activity-alias#com.phonecam.MainActivityLauncher
+activity-alias#com.phonecam.Launcher
 ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:31:9-40:26
 	android:enabled
 		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:35:13-35
@@ -113,7 +113,7 @@ ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\mai
 	android:targetActivity
 		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:33:13-51
 	android:name
-		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:32:13-49
+		ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:32:13-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\AndreyTHT\Downloads\PhoneCam_Android\PhoneCamApp\app\src\main\AndroidManifest.xml:36:13-39:29
 action#android.intent.action.MAIN

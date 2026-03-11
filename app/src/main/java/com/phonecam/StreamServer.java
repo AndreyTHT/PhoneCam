@@ -3,6 +3,7 @@ package com.phonecam;
 import android.util.Log;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -13,13 +14,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicReference;
 
-/**
- * Pure-Java HTTP server serving:
- *   GET /         → viewer HTML page
- *   GET /stream   → MJPEG multipart stream (no WebSocket, no reconnects)
- *   GET /api/status → JSON
- *   POST /api/settings → change quality/res/cam
- */
 public class StreamServer {
 
     private static final String TAG = "StreamServer";
@@ -80,10 +74,7 @@ public class StreamServer {
     }
 
     public int getViewerCount() { return clients.size(); }
-
-    private void notifyCount() {
-        if (listener != null) listener.onCountChanged(clients.size());
-    }
+    private void notifyCount() { if (listener != null) listener.onCountChanged(clients.size()); }
 
     // ── Accept loop ───────────────────────────────────────────────────────────
 
@@ -92,7 +83,7 @@ public class StreamServer {
             try {
                 Socket socket = serverSocket.accept();
                 socket.setTcpNoDelay(true);
-                socket.setSoTimeout(5000); // 5s read timeout for request headers
+                socket.setSoTimeout(5000);
                 clientPool.execute(() -> handleClient(socket));
             } catch (Exception e) {
                 if (running) Log.e(TAG, "Accept error", e);
@@ -102,41 +93,65 @@ public class StreamServer {
 
     private void handleClient(Socket socket) {
         try {
-            // Read request line
-            StringBuilder sb = new StringBuilder();
-            java.io.InputStream in = socket.getInputStream();
-            int c;
-            while ((c = in.read()) != -1) {
-                sb.append((char) c);
-                if (sb.toString().contains("\r\n\r\n")) break;
+            InputStream in = socket.getInputStream();
+
+            // --- Read headers byte-by-byte until \r\n\r\n ---
+            StringBuilder headerBuf = new StringBuilder();
+            int b0 = 0, b1 = 0, b2 = 0, b3;
+            while (true) {
+                int ch = in.read();
+                if (ch == -1) { socket.close(); return; }
+                headerBuf.append((char) ch);
+                b3 = ch;
+                if (b0 == '\r' && b1 == '\n' && b2 == '\r' && b3 == '\n') break;
+                b0 = b1; b1 = b2; b2 = b3;
             }
-            String request = sb.toString();
-            String[] lines = request.split("\r\n");
+            String rawHeaders = headerBuf.toString();
+            String[] lines = rawHeaders.split("\r\n");
             if (lines.length == 0) { socket.close(); return; }
 
-            String[] parts = lines[0].split(" ");
-            if (parts.length < 2) { socket.close(); return; }
-            String method = parts[0];
-            String path   = parts[1].split("\\?")[0]; // strip query string
+            // Parse request line
+            String[] reqParts = lines[0].split(" ");
+            if (reqParts.length < 2) { socket.close(); return; }
+            String method = reqParts[0];
+            String path   = reqParts[1].split("\\?")[0];
 
-            // Remove read timeout for streaming connections
+            // --- Read POST body using Content-Length ---
+            String body = "";
+            if ("POST".equalsIgnoreCase(method)) {
+                int contentLength = 0;
+                for (String line : lines) {
+                    if (line.toLowerCase().startsWith("content-length:")) {
+                        try {
+                            contentLength = Integer.parseInt(line.substring(15).trim());
+                        } catch (NumberFormatException ignored) {}
+                    }
+                }
+                if (contentLength > 0) {
+                    byte[] bodyBytes = new byte[contentLength];
+                    int totalRead = 0;
+                    while (totalRead < contentLength) {
+                        int n = in.read(bodyBytes, totalRead, contentLength - totalRead);
+                        if (n == -1) break;
+                        totalRead += n;
+                    }
+                    body = new String(bodyBytes, 0, totalRead, "UTF-8");
+                }
+            }
+
+            Log.d(TAG, method + " " + path + (body.isEmpty() ? "" : " body=" + body));
+
+            // Remove read timeout before handing off
             socket.setSoTimeout(0);
 
             switch (path) {
-                case "/stream":
-                    handleStream(socket);
-                    break;
-                case "/api/status":
-                    handleStatus(socket);
-                    break;
-                case "/api/settings":
-                    handleSettings(socket, request);
-                    break;
-                default:
-                    handlePage(socket);
-                    break;
+                case "/stream":   handleStream(socket);          break;
+                case "/api/status":  handleStatus(socket);       break;
+                case "/api/settings": handleSettings(socket, body); break;
+                default:          handlePage(socket);             break;
             }
         } catch (Exception e) {
+            Log.e(TAG, "handleClient error", e);
             try { socket.close(); } catch (Exception ignored) {}
         }
     }
@@ -145,8 +160,6 @@ public class StreamServer {
 
     private void handleStream(Socket socket) throws IOException {
         OutputStream out = socket.getOutputStream();
-
-        // HTTP response headers
         String headers =
             "HTTP/1.1 200 OK\r\n" +
             "Content-Type: multipart/x-mixed-replace;boundary=frame\r\n" +
@@ -161,12 +174,9 @@ public class StreamServer {
         clients.add(client);
         notifyCount();
 
-        // Send last frame immediately so viewer sees image right away
         byte[] last = lastFrame.get();
         if (last != null) client.sendFrame(last);
 
-        // Block here — client thread stays alive as long as connection is open
-        // sendFrame returns false when connection drops → exit
         client.waitUntilDead();
 
         clients.remove(client);
@@ -218,17 +228,18 @@ public class StreamServer {
 
     // ── /api/settings ─────────────────────────────────────────────────────────
 
-    private void handleSettings(Socket socket, String fullRequest) throws IOException {
-        // Body is after \r\n\r\n
-        String body = "";
-        int idx = fullRequest.indexOf("\r\n\r\n");
-        if (idx >= 0) body = fullRequest.substring(idx + 4).trim();
-
+    private void handleSettings(Socket socket, String body) throws IOException {
+        Log.d(TAG, "Settings body: " + body);
         if (body.contains("\"action\":\"quality\"")) {
-            service.setQualityFromBrowser(extractInt(body, "value", 50));
+            int val = extractInt(body, "value", 50);
+            Log.d(TAG, "Set quality: " + val);
+            service.setQualityFromBrowser(val);
         } else if (body.contains("\"action\":\"res\"")) {
-            service.setResFromBrowser(extractInt(body, "value", 1));
+            int val = extractInt(body, "value", 1);
+            Log.d(TAG, "Set res: " + val);
+            service.setResFromBrowser(val);
         } else if (body.contains("\"action\":\"switchCam\"")) {
+            Log.d(TAG, "Switch cam");
             service.switchCameraFromBrowser();
         }
 
@@ -274,7 +285,6 @@ public class StreamServer {
         boolean sendFrame(byte[] jpeg) {
             if (!alive) return false;
             try {
-                // MJPEG boundary + JPEG part headers
                 String partHeader =
                     "--frame\r\n" +
                     "Content-Type: image/jpeg\r\n" +
@@ -294,10 +304,8 @@ public class StreamServer {
         }
 
         void waitUntilDead() {
-            // Poll until socket is closed by client or sendFrame fails
             while (alive) {
                 try {
-                    // Try reading — will return -1 or throw when browser disconnects
                     int b = socket.getInputStream().read();
                     if (b == -1) { alive = false; break; }
                 } catch (Exception e) {
@@ -355,7 +363,6 @@ public class StreamServer {
         "</header>" +
         "<div id='wrap' onclick='toggleCtrl()'>" +
         "<div id='ph'><div class='ph-icon'>📷</div><span>Загрузка...</span></div>" +
-        // MJPEG stream — просто img тег, браузер сам держит соединение
         "<img id='stream' src='/stream' alt='' onload='onLoad()' onerror='onErr()'>" +
         "</div>" +
         "<div id='ctrl'>" +
@@ -374,66 +381,54 @@ public class StreamServer {
         "</div>" +
         "<div class='ctrl-row'>" +
         "<span class='ctrl-lbl'>Camera</span>" +
-        "<button class='rbtn' onclick='switchCam()' style='flex:none;padding:5px 14px'>↺ Switch</button>" +
+        "<button class='rbtn' onclick='switchCam()' style='flex:none;padding:5px 14px'>&#8635; Switch</button>" +
         "<span style='flex:1'></span>" +
-        "<button class='rbtn' onclick='toggleFs()' style='flex:none;padding:5px 14px'>⛶ Full</button>" +
+        "<button class='rbtn' onclick='toggleFs()' style='flex:none;padding:5px 14px'>&#x26F6; Full</button>" +
         "</div>" +
         "</div>" +
         "<footer>" +
-        "<div class='stat'><span class='sv' id='fps'>—</span><span class='sl'>FPS</span></div>" +
-        "<div class='stat'><span class='sv' id='res'>—</span><span class='sl'>RES</span></div>" +
-        "<div class='stat'><span class='sv' id='viewers'>—</span><span class='sl'>VIEWERS</span></div>" +
+        "<div class='stat'><span class='sv' id='fps'>-</span><span class='sl'>FPS</span></div>" +
+        "<div class='stat'><span class='sv' id='res'>-</span><span class='sl'>RES</span></div>" +
+        "<div class='stat'><span class='sv' id='viewers'>-</span><span class='sl'>VIEWERS</span></div>" +
         "</footer>" +
         "<script>" +
-        "var ctrlVisible=false,qTimer=null,curRes=1,fpsCount=0,lastSize=0;" +
-
-        // MJPEG img events
+        "var ctrlVisible=false,qTimer=null,curRes=1,fpsCount=0;" +
         "function onLoad(){" +
         "document.getElementById('ph').style.display='none';" +
         "var s=document.getElementById('stream');" +
         "document.getElementById('res').textContent=s.naturalWidth+'x'+s.naturalHeight;" +
-        "fpsCount++;" +
-        "}" +
-        "function onErr(){" +
-        // On error reload stream after short delay
-        "setTimeout(function(){document.getElementById('stream').src='/stream?t='+Date.now();},1000);" +
-        "}" +
-
-        // FPS counter via load events
-        "setInterval(function(){" +
-        "document.getElementById('fps').textContent=fpsCount;" +
-        "fpsCount=0;" +
-        "},1000);" +
-
-        // Poll status
-        "function pollStatus(){" +
-        "fetch('/api/status').then(r=>r.json()).then(d=>{" +
+        "fpsCount++;}" +
+        "function onErr(){setTimeout(function(){" +
+        "document.getElementById('stream').src='/stream?t='+Date.now();},1500);}" +
+        "setInterval(function(){document.getElementById('fps').textContent=fpsCount;fpsCount=0;},1000);" +
+        "function pollStatus(){fetch('/api/status').then(function(r){return r.json();}).then(function(d){" +
         "document.getElementById('viewers').textContent=d.viewers;" +
         "}).catch(function(){});}" +
         "setInterval(pollStatus,3000);pollStatus();" +
-
-        // Load settings
-        "fetch('/api/status').then(r=>r.json()).then(d=>{" +
+        "fetch('/api/status').then(function(r){return r.json();}).then(function(d){" +
         "var q=d.quality||50;" +
         "document.getElementById('sQ').value=q;" +
         "document.getElementById('vQ').textContent=q+'%';" +
         "curRes=d.res||1;highlightRes(curRes);" +
         "}).catch(function(){});" +
-
-        // API call
-        "function api(body){fetch('/api/settings',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).catch(function(){});}" +
-
-        // Quality debounced
-        "function onQ(v){document.getElementById('vQ').textContent=v+'%';clearTimeout(qTimer);qTimer=setTimeout(function(){api({action:'quality',value:parseInt(v)});},200);}" +
-
-        // Resolution
+        "function api(obj){" +
+        "fetch('/api/settings',{method:'POST'," +
+        "headers:{'Content-Type':'application/json'}," +
+        "body:JSON.stringify(obj)})" +
+        ".catch(function(){});}" +
+        "function onQ(v){document.getElementById('vQ').textContent=v+'%';" +
+        "clearTimeout(qTimer);" +
+        "qTimer=setTimeout(function(){api({action:'quality',value:parseInt(v)});},200);}" +
         "function setRes(i){curRes=i;highlightRes(i);api({action:'res',value:i});}" +
-        "function highlightRes(i){[0,1,2].forEach(function(j){document.getElementById('r'+j).className='rbtn'+(j===i?' on':'');});}" +
-
+        "function highlightRes(i){" +
+        "for(var j=0;j<3;j++){" +
+        "document.getElementById('r'+j).className='rbtn'+(j===i?' on':'');}}" +
         "function switchCam(){api({action:'switchCam'});}" +
-        "function toggleCtrl(){ctrlVisible=!ctrlVisible;document.getElementById('ctrl').className=ctrlVisible?'show':'';}" +
-        "function toggleFs(){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen();}" +
+        "function toggleCtrl(){ctrlVisible=!ctrlVisible;" +
+        "document.getElementById('ctrl').className=ctrlVisible?'show':'';}" +
+        "function toggleFs(){" +
+        "if(document.fullscreenElement)document.exitFullscreen();" +
+        "else document.documentElement.requestFullscreen();}" +
         "</script></body></html>";
     }
-
 }

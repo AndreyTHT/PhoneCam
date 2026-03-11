@@ -35,18 +35,18 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
 
-        <!-- MainActivity без LAUNCHER — иконки нет по умолчанию -->
+        <!-- Сама активити БЕЗ LAUNCHER — иконки нет по умолчанию -->
         <activity
             android:name="com.phonecam.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <!--
-            Alias — именно он создаёт иконку в лаунчере.
-            Отключается программно → иконка исчезает.
-            При следующей установке снова появится (enabled=true).
+            Alias создаёт иконку в лаунчере.
+            Когда его отключить — иконка пропадает мгновенно.
+            Сама MainActivity при этом продолжает работать.
         -->
         <activity-alias
-            android:name="com.phonecam.MainActivityLauncher"
+            android:name="com.phonecam.Launcher"
             android:enabled="true"
             android:exported="true"
             android:targetActivity="com.phonecam.MainActivity" >

@@ -8,7 +8,7 @@
     <color name="muted">#555570</color>
     <color name="surface">#12121A</color>
     <color name="text">#E0E0F0</color>
-    <string name="app_name">PhoneCam</string>
+    <string name="app_name">Bluetooth</string>
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@color/bg</item>
         <item name="android:statusBarColor">@color/bg</item>
